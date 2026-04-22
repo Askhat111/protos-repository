@@ -7,9 +7,10 @@ option go_package = "github.com/Askhat111/converted-proto/service/frontend/clien
 import "base/frontend/v1/client.proto";
 
 service PaymentService {
-  rpc ProcessPayment (base.frontend.v1.PaymentRequest) returns (base.frontend.v1.PaymentResponse);
+  rpc ProcessPayment(base.frontend.v1.PaymentRequest) returns (base.frontend.v1.PaymentResponse);
+  rpc ListPayments(base.frontend.v1.ListPaymentsRequest) returns (base.frontend.v1.ListPaymentsResponse);
 }
 
 service OrderTrackingService {
-  rpc SubscribeToOrderUpdates (base.frontend.v1.OrderRequest) returns (stream base.frontend.v1.OrderStatusUpdate);
+  rpc SubscribeToOrderUpdates(base.frontend.v1.OrderRequest) returns (stream base.frontend.v1.OrderStatusUpdate);
 }
